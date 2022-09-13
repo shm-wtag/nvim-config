@@ -13,6 +13,7 @@ local servers = {
   "jsonls",
   "yamlls",
   "rust_analyzer",
+  "zls",
 }
 
 lsp_installer.setup()
