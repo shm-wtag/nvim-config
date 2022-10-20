@@ -1,3 +1,5 @@
+local script = require("user.script")
+
 -- Shorten function name
 local keymap = vim.keymap.set
 -- Silent keymap option
@@ -14,6 +16,9 @@ vim.g.mapleader = " "
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
+
+-- Open terminal and run aiaibot
+keymap("n", "<leader>oo", script.open, opts)
 
 -- Normal --
 -- Better window navigation
@@ -42,8 +47,9 @@ keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Insert --
--- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+-- Press jj fast to enter
+keymap("i", "jj", "<ESC>", opts)
+keymap("i", "kk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode

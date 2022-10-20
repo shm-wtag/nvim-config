@@ -14,6 +14,8 @@ local servers = {
 	"yamlls",
 	"rust_analyzer",
 	"zls",
+	"vuels",
+	"eslint",
 }
 
 lsp_installer.setup()
